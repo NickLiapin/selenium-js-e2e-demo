@@ -1,0 +1,25 @@
+{
+  "name": "selenium-js-e2e-demo",
+  "version": "1.0.0",
+  "description": "Senior Selenium WebDriver E2E automation in JavaScript (Page Object Model, Mocha, headless Chrome, GitHub Actions CI) against the public Swag Labs demo site.",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "selenium",
+    "selenium-webdriver",
+    "javascript",
+    "e2e",
+    "test-automation",
+    "qa-automation",
+    "page-object-model",
+    "mocha",
+    "ci"
+  ],
+  "author": "Nick Liapin",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^10.7.3",
+    "selenium-webdriver": "^4.25.0"
+  }
+}

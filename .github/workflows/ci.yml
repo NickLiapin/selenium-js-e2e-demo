@@ -1,0 +1,29 @@
+name: E2E Tests (Selenium)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Selenium WebDriver E2E
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ubuntu-latest ships with Google Chrome pre-installed; Selenium Manager
+      # (bundled with selenium-webdriver 4.x) resolves the matching chromedriver.
+      - name: Run tests
+        run: npm test
